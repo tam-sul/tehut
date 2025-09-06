@@ -1,0 +1,300 @@
+/* COMPLETE TIHUT CLINIC BRANDING - REMOVES ALL BAHMNI REFERENCES */
+
+/* ============================================ */
+/*              LOGO REPLACEMENTS              */
+/* ============================================ */
+
+/* Main logo replacements - Replace ALL Bahmni logos with TIHUT logo */
+.header-logo,
+.app-header .logo,
+.navbar-brand img,
+.login-logo,
+.bahmni-logo,
+.logo img,
+.client_logo,
+img[src*="bahmni"],
+img[src*="Bahmni"],
+img[alt*="bahmni"],
+img[alt*="Bahmni"] {
+    content: url('/bahmni_config/images/tihut-logo.jpg') !important;
+    max-height: 60px !important;
+    width: auto !important;
+    background-image: url('/bahmni_config/images/tihut-logo.jpg') !important;
+}
+
+/* Small logo for mobile and compact views */
+.header-logo-small,
+.mobile-logo,
+.compact-logo {
+    content: url('/bahmni_config/images/tihut-logo-small.jpg') !important;
+    max-height: 40px !important;
+    width: auto !important;
+}
+
+/* Login page logo replacement */
+.login-page .logo-container,
+.login-header .logo {
+    background-image: url('/bahmni_config/images/tihut-logo.jpg') !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 80px;
+}
+
+/* Report and print logos */
+.report-header img,
+.print-header img,
+.report-logo {
+    content: url('/bahmni_config/images/tihut-logo.jpg') !important;
+    max-height: 50px !important;
+}
+
+/* ============================================ */
+/*              TEXT REPLACEMENTS              */
+/* ============================================ */
+
+/* Hide ALL Bahmni text references */
+.bahmni-title,
+.app-title,
+.bahmni-name,
+.bahmni-text,
+.bahmni-info,
+.bahmni-brand,
+*[alt*="Bahmni"],
+*[title*="Bahmni"],
+span:contains("Bahmni"),
+div:contains("Bahmni"),
+h1:contains("Bahmni"),
+h2:contains("Bahmni"),
+h3:contains("Bahmni") {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Replace page title */
+title {
+    text-indent: -9999px;
+}
+title:after {
+    content: "TIHUT Clinic - Healthcare Management System";
+    text-indent: 0;
+}
+
+/* Custom clinic name displays */
+.clinic-name::after,
+.hospital-name::after {
+    content: "TIHUT Clinic" !important;
+    font-weight: bold;
+    color: #2c5aa0;
+    font-size: inherit;
+}
+
+/* Navigation and header text replacement */
+.navbar-brand .text,
+.header-title {
+    display: none !important;
+}
+.navbar-brand::after,
+.header-title::after {
+    content: "TIHUT Clinic" !important;
+    color: #2c5aa0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ============================================ */
+/*              LAYOUT CUSTOMIZATIONS          */
+/* ============================================ */
+
+/* Login page customization */
+.login-page {
+    background-color: #f8f9fa !important;
+}
+
+.login-page .bahmni-logo,
+.login-page .bahmni-text,
+.login-page [class*="bahmni"] {
+    display: none !important;
+}
+
+.login-page::before {
+    content: "TIHUT Clinic" !important;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c5aa0;
+    margin-bottom: 20px;
+    background-image: url('/bahmni_config/images/tihut-logo.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 200px auto;
+    padding-top: 80px;
+}
+
+/* Footer customization */
+.app-footer,
+.footer {
+    background-color: #2c5aa0 !important;
+    color: white !important;
+}
+
+.app-footer .bahmni-info,
+.footer .bahmni-info {
+    display: none !important;
+}
+
+.app-footer::after,
+.footer::after {
+    content: "© 2025 TIHUT Clinic - Healthcare Management System" !important;
+    color: white;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ============================================ */
+/*              COLOR SCHEME                   */
+/* ============================================ */
+
+/* TIHUT Clinic color scheme */
+:root {
+    --primary-color: #2c5aa0;     /* TIHUT Blue */
+    --secondary-color: #ffffff;    /* White */
+    --accent-color: #f8f9fa;      /* Light Gray */
+    --text-color: #333333;        /* Dark Gray */
+}
+
+/* Apply TIHUT colors to buttons and elements */
+.btn-primary,
+.btn-info,
+.nav-tabs .nav-link.active,
+.navbar-default {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.btn-primary:hover,
+.btn-info:hover {
+    background-color: #1e3d6f !important;
+    border-color: #1e3d6f !important;
+}
+
+/* Navigation bar styling */
+.navbar,
+.header,
+.top-bar {
+    background-color: var(--primary-color) !important;
+    border-bottom: 3px solid #ffffff;
+}
+
+.navbar-nav .nav-link,
+.header a {
+    color: white !important;
+}
+
+/* ============================================ */
+/*              RESPONSIVE DESIGN              */
+/* ============================================ */
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .header-logo,
+    .login-logo {
+        content: url('/bahmni_config/images/tihut-logo-small.jpg') !important;
+        max-height: 40px !important;
+    }
+    
+    .navbar-brand::after {
+        font-size: 14px !important;
+    }
+}
+
+/* ============================================ */
+/*              PRINT STYLES                   */
+/* ============================================ */
+
+/* Ensure TIHUT branding appears in printed documents */
+@media print {
+    .header-logo,
+    .report-header img,
+    .print-header img {
+        content: url('/bahmni_config/images/tihut-logo.jpg') !important;
+        max-height: 40px !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    .print-header::before {
+        content: "TIHUT Clinic - Healthcare Management System" !important;
+        font-size: 18px;
+        font-weight: bold;
+        color: #2c5aa0 !important;
+        text-align: center;
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    /* Hide any Bahmni text in print */
+    *[class*="bahmni"],
+    *:contains("Bahmni") {
+        display: none !important;
+    }
+}
+
+/* ============================================ */
+/*              FORCE OVERRIDES                */
+/* ============================================ */
+
+/* Nuclear option - force hide any remaining Bahmni references */
+[class*="bahmni" i],
+[id*="bahmni" i],
+[data-*="bahmni" i] {
+    background-image: url('/bahmni_config/images/tihut-logo.jpg') !important;
+}
+
+/* Text content replacement using JavaScript will be added */
+body::before {
+    content: "";
+    position: absolute;
+    top: -9999px;
+    /* This will be handled by JavaScript for text replacement */
+}
+
+/* Custom loading screen */
+.loading-screen::after {
+    content: "Loading TIHUT Clinic System..." !important;
+}
+
+/* Welcome messages */
+.welcome-message::after {
+    content: "Welcome to TIHUT Clinic Healthcare Management System" !important;
+}
+
+/* ============================================ */
+/*              FINAL OVERRIDES                */
+/* ============================================ */
+
+/* Ensure all images with bahmni in the name get replaced */
+img[src*="bahmni" i] {
+    opacity: 0 !important;
+    position: relative;
+}
+
+img[src*="bahmni" i]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/bahmni_config/images/tihut-logo.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+}
+
+/* End of TIHUT Clinic Complete Branding */

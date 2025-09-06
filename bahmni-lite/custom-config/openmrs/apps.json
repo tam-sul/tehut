@@ -1,0 +1,49 @@
+{
+  "apps": [
+    {
+      "id": "bahmni.home",
+      "extensionPoints": [
+        {
+          "id": "org.bahmni.home.dashboard",
+          "description": "TIHUT Clinic Dashboard"
+        }
+      ],
+      "contextModel": [
+        "patientUuid",
+        "visitUuid"
+      ],
+      "config": {
+        "title": "TIHUT Clinic",
+        "logo": "/bahmni_config/images/tihut-logo.jpg",
+        "logoAltText": "TIHUT Clinic Healthcare Management System",
+        "name": "TIHUT Clinic",
+        "hospitalName": "TIHUT Clinic",
+        "organizationName": "TIHUT Clinic Healthcare Management System"
+      }
+    },
+    {
+      "id": "bahmni.clinical",
+      "config": {
+        "title": "TIHUT Clinic - Clinical",
+        "logo": "/bahmni_config/images/tihut-logo.jpg",
+        "name": "TIHUT Clinic Clinical System"
+      }
+    },
+    {
+      "id": "bahmni.registration",
+      "config": {
+        "title": "TIHUT Clinic - Registration",
+        "logo": "/bahmni_config/images/tihut-logo.jpg",
+        "name": "TIHUT Clinic Patient Registration"
+      }
+    },
+    {
+      "id": "bahmni.admin",
+      "config": {
+        "title": "TIHUT Clinic - Administration",
+        "logo": "/bahmni_config/images/tihut-logo.jpg",
+        "name": "TIHUT Clinic Administration"
+      }
+    }
+  ]
+}

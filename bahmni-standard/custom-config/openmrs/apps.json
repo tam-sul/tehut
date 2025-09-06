@@ -1,0 +1,22 @@
+{
+  "apps": [
+    {
+      "id": "bahmni.home",
+      "extensionPoints": [
+        {
+          "id": "org.bahmni.home.dashboard",
+          "description": "Home Dashboard"
+        }
+      ],
+      "contextModel": [
+        "patientUuid",
+        "visitUuid"
+      ],
+      "config": {
+        "title": "TIHUT Medium Clinic",
+        "logo": "/bahmni_config/images/clinic-logo.jpg",
+        "logoAltText": "TIHUT Medium Clinic Logo"
+      }
+    }
+  ]
+}
