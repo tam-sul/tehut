@@ -29,7 +29,7 @@ fi
 
 # 3. Check if OpenMRS modules are loaded
 echo "🔍 Checking OpenMRS module status..."
-timeout 10 curl -s http://localhost/openmrs/ > /dev/null 2>&1
+timeout 10 curl -s http://irif.world/openmrs/ > /dev/null 2>&1
 if [ $? -eq 0 ]; then
     echo "✅ OpenMRS web access: OK"
 else
@@ -38,7 +38,7 @@ fi
 
 # 4. Test REST API
 echo "🔍 Testing REST API..."
-timeout 10 curl -s "http://localhost/openmrs/ws/rest/v1/session" > /dev/null 2>&1
+timeout 10 curl -s "http://irif.world/openmrs/ws/rest/v1/session" > /dev/null 2>&1
 if [ $? -eq 0 ]; then
     echo "✅ REST API: Responding"
 else
@@ -53,8 +53,8 @@ echo ""
 echo "✅ TROUBLESHOOTING COMPLETE!"
 echo ""
 echo "🌐 Now try accessing:"
-echo "   • Main URL: http://localhost"
-echo "   • Alt URL:  http://localhost:8090"
+echo "   • Main URL: http://irif.world"
+echo "   • Alt URL:  http://irif.world:8090"
 echo ""
 echo "🔐 Login with:"
 echo "   • Username: superman"
@@ -63,7 +63,7 @@ echo ""
 echo "💡 If still having issues, try:"
 echo "   • Use incognito/private browsing"
 echo "   • Try username 'registration' instead of 'superman'"
-echo "   • Access http://localhost/openmrs directly"
+echo "   • Access http://irif.world/openmrs directly"
 echo ""
 echo "📞 If problem persists, the issue might be:"
 echo "   • Missing reference data in the database"

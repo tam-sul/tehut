@@ -43,3 +43,4 @@ services:
     environment:
       - ORGANIZATION_NAME=TIHUT Clinic
       - HOSPITAL_NAME=TIHUT Clinic
+  

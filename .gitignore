@@ -1,5 +1,55 @@
+# IDE & Editor
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# System Files
+.DS_Store
 .cache/
+Thumbs.db
+
+# Docker & Docker Compose
+.env.local
+.env.production
+docker-compose.override.local.yml
+
+# Backups & Artifacts
 **/backup-artifacts/*
 **/restore-artifacts/*
-.DS_Store
+*.sql.backup
+*.tar.gz.backup
+
+# Logs
+*.log
+startup.log
+bahmni-lite/startup.log
+
+# Temporary Files
+*.tmp
+*.temp
+cookies.txt
+
+# SSL Certificates (don't commit)
+*.pem
+*.key
+*.crt
+*.p12
+ssl/
+certificates/
+
+# Database dumps
+*.sql.gz
+*.mysql
+
+# Node modules (if any)
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Custom local configs
+.env.custom
+.env.dev.local

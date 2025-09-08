@@ -5,12 +5,12 @@ echo "================================="
 echo ""
 
 # Test URLs for different access levels
-BAHMNI_HOME="http://localhost/bahmni/home/"
-BAHMNI_CLINICAL="http://localhost/bahmni/clinical/"
-BAHMNI_REGISTRATION="http://localhost/bahmni/registration/"
-BAHMNI_REPORTS="http://localhost/bahmni/reports/"
-BAHMNI_ADMIN="http://localhost/bahmni/admin/"
-OPENMRS_ADMIN="http://localhost/openmrs/admin/"
+BAHMNI_HOME="http://irif.world/bahmni/home/"
+BAHMNI_CLINICAL="http://irif.world/bahmni/clinical/"
+BAHMNI_REGISTRATION="http://irif.world/bahmni/registration/"
+BAHMNI_REPORTS="http://irif.world/bahmni/reports/"
+BAHMNI_ADMIN="http://irif.world/bahmni/admin/"
+OPENMRS_ADMIN="http://irif.world/openmrs/admin/"
 
 # Color codes
 RED='\033[0;31m'
