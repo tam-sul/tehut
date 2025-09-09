@@ -40,7 +40,7 @@ Select option **1) START Bahmni services**
 ```
 
 4. **Access the system:**
-- **Main URL:** `https://localhost/bahmni/home/`
+- **Main URL:** `https://irif.world/bahmni/home/`
 - **Accept SSL certificate warning once** (click Advanced → Proceed)
 
 ## 🔐 Default Login Credentials
@@ -54,17 +54,17 @@ After starting, access these URLs:
 
 | Service | URL | Purpose |
 |---------|-----|---------|
-| **Main Dashboard** | `https://localhost/bahmni/home/` | TEHUT EMR Login |
-| **Registration** | `https://localhost/bahmni/registration/` | Patient Registration |
-| **Clinical** | `https://localhost/bahmni/clinical/` | Clinical Consultations |
-| **Reports** | `https://localhost/bahmni/reports/` | Analytics & Reports |
-| **Admin Panel** | `https://localhost/openmrs/admin/` | System Administration |
-| **Billing** | `https://localhost:444/` | Crater Billing System |
+| **Main Dashboard** | `https://irif.world/bahmni/home/` | TEHUT EMR Login |
+| **Registration** | `https://irif.world/bahmni/registration/` | Patient Registration |
+| **Clinical** | `https://irif.world/bahmni/clinical/` | Clinical Consultations |
+| **Reports** | `https://irif.world/bahmni/reports/` | Analytics & Reports |
+| **Admin Panel** | `https://irif.world/openmrs/admin/` | System Administration |
+| **Billing** | `https://irif.world:444/` | Crater Billing System |
 
 ## ⚙️ System Configuration
 
 ### Adding Clinics/Locations
-1. Go to: `https://localhost/openmrs/admin/`
+1. Go to: `https://irif.world/openmrs/admin/`
 2. Navigate to: **Administration → Locations → Manage Locations**
 3. Add your clinics through the web interface
 
