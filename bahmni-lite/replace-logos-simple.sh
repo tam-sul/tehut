@@ -16,17 +16,17 @@ echo "==================================="
 # Use the JPG files directly since PNG conversion has file system issues
 docker exec bahmni-lite-bahmni-web-1 sh -c "
     echo '🔄 Replacing main bahmni-logo.png...'
-    cp /usr/local/apache2/htdocs/bahmni_config/images/tehut-logo.jpg /usr/local/apache2/htdocs/bahmni-logo.png
+    cp /usr/local/apache2/htdocs/bahmni_config/images/tihut-logo.jpg /usr/local/apache2/htdocs/bahmni-logo.png
     
     echo '🔄 Replacing registration card logo...'
-    cp /usr/local/apache2/htdocs/bahmni_config/images/tehut-logo.jpg /usr/local/apache2/htdocs/bahmni_config/openmrs/apps/registration/registrationCardLayout/images/bahmniLogo.png
+    cp /usr/local/apache2/htdocs/bahmni_config/images/tihut-logo.jpg /usr/local/apache2/htdocs/bahmni_config/openmrs/apps/registration/registrationCardLayout/images/bahmniLogo.png
     
     echo '🔄 Replacing custom display control logo...'
-    cp /usr/local/apache2/htdocs/bahmni_config/images/tehut-logo.jpg /usr/local/apache2/htdocs/bahmni_config/openmrs/apps/customDisplayControl/images/bahmniLogo.png
+    cp /usr/local/apache2/htdocs/bahmni_config/images/tihut-logo.jpg /usr/local/apache2/htdocs/bahmni_config/openmrs/apps/customDisplayControl/images/bahmniLogo.png
     
     echo '🔄 Replacing main Bahmni interface logos...'
-    cp /usr/local/apache2/htdocs/bahmni_config/images/tehut-logo.jpg /usr/local/apache2/htdocs/bahmni/images/bahmniLogo.png
-    cp /usr/local/apache2/htdocs/bahmni_config/images/tehut-logo.jpg /usr/local/apache2/htdocs/bahmni/images/bahmniLogoFull.png
+    cp /usr/local/apache2/htdocs/bahmni_config/images/tihut-logo.jpg /usr/local/apache2/htdocs/bahmni/images/bahmniLogo.png
+    cp /usr/local/apache2/htdocs/bahmni_config/images/tihut-logo.jpg /usr/local/apache2/htdocs/bahmni/images/bahmniLogoFull.png
     
     echo '✅ Main logo replacements completed!'
 "
@@ -38,8 +38,8 @@ echo "======================================"
 if docker ps | grep -q bahmni-lite-bahmni-config-1; then
     docker exec bahmni-lite-bahmni-config-1 sh -c "
         echo '🔄 Replacing config logos...'
-        cp /usr/local/bahmni_config/images/tehut-logo.jpg /usr/local/bahmni_config/openmrs/apps/registration/registrationCardLayout/images/bahmniLogo.png 2>/dev/null || true
-        cp /usr/local/bahmni_config/images/tehut-logo.jpg /usr/local/bahmni_config/openmrs/apps/customDisplayControl/images/bahmniLogo.png 2>/dev/null || true
+        cp /usr/local/bahmni_config/images/tihut-logo.jpg /usr/local/bahmni_config/openmrs/apps/registration/registrationCardLayout/images/bahmniLogo.png 2>/dev/null || true
+        cp /usr/local/bahmni_config/images/tihut-logo.jpg /usr/local/bahmni_config/openmrs/apps/customDisplayControl/images/bahmniLogo.png 2>/dev/null || true
         
         echo '✅ Config logo replacements completed!'
     "

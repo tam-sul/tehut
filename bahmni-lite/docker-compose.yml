@@ -20,7 +20,7 @@ services:
   proxy:
     image: 'bahmni/proxy:${PROXY_IMAGE_TAG:?}'
     volumes:
-      - /etc/letsencrypt/live/irif.world-0001:/etc/tls
+      - /etc/letsencrypt/live/irif.world:/etc/tls
     ports:
       - '80:80'
       - '443:443'  # Required for full API functionality
@@ -95,7 +95,6 @@ services:
       - 'bahmni-clinical-forms:/home/bahmni/clinical_forms'
       - 'configuration_checksums:/openmrs/data/configuration_checksums'
       - 'sms-token:/openmrs/data/sms-token'
-
     depends_on:
       - openmrsdb
     logging: *log-config
@@ -115,7 +114,6 @@ services:
     volumes:
       - 'openmrsdbdata:/var/lib/mysql'
       - 'configuration_checksums:/configuration_checksums'
-
     logging: *log-config
 
   crater-php:
@@ -172,7 +170,6 @@ services:
       MYSQL_DATABASE: ${CRATER_DB_DATABASE:?}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?}
 
-
   metabasedb:
     image: postgres:${METABASE_POSTGRES_IMAGE_TAG:?}
     restart: on-failure:[3]
@@ -184,7 +181,6 @@ services:
       POSTGRES_PASSWORD: ${METABASE_DB_PASSWORD:?}
     volumes:
       - 'metabase-data:/var/lib/postgresql/data'
-
 
   metabase:
     image: bahmni/bahmni-metabase:${METABASE_IMAGE_TAG:?}
@@ -224,7 +220,6 @@ services:
     volumes:
       - 'mart-data:/var/lib/postgresql/data'
 
-
   mart:
     image: bahmni/bahmni-mart:${BAHMNI_MART_IMAGE_TAG:?}
     profiles: ["bahmni-mart"]
@@ -250,7 +245,7 @@ services:
      - 'bahmni-clinical-forms:/home/bahmni/clinical_forms'
 
   bahmni-web:
-    image: tehut/bahmni-web:${BAHMNI_WEB_IMAGE_TAG:?}
+    image: tihut/bahmni-web:${BAHMNI_WEB_IMAGE_TAG:?}
     profiles: ["emr","bahmni-lite","bahmni-mart"]
     ports:
       - '8090:8091'
