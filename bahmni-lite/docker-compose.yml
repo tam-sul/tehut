@@ -19,8 +19,8 @@ services:
 
   proxy:
     image: 'bahmni/proxy:${PROXY_IMAGE_TAG:?}'
-    #volumes:
-      # - ${CERTIFICATE_PATH}:/etc/tls
+    volumes:
+      - /etc/letsencrypt/live/irif.world-0001:/etc/tls
     ports:
       - '80:80'
       - '443:443'  # Required for full API functionality
@@ -28,11 +28,6 @@ services:
     restart: ${RESTART_POLICY}
     environment:
       TZ: ${TZ}
-      # Force HTTP-only mode
-      HTTPS_REDIRECT: "off"
-      SSL_MODE: "disabled" 
-      FORCE_SSL: "false"
-      HTTP_ONLY: "true"
 
   bahmni-config:
     image: 'bahmni/clinic-config:${CONFIG_IMAGE_TAG:?}'
